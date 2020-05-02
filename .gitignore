@@ -1,4 +1,3 @@
 # Project exclude paths
 /venv/
-misc.xml
-RolGame.iml
+.idea
