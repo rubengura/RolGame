@@ -12,6 +12,7 @@ class Personaje:
         self.mp_actuales = self.max_pm
         self.capacidad_peso = self.fuerza * 3
         self.exp_acumulada = 0
+        self.exp_proximo_nivel = 100
 
     def subir_nivel(self):
         self.nivel += 1
@@ -22,3 +23,16 @@ class Personaje:
         self.max_hp = self.fuerza * 5
         self.max_pm = self.magia * 5
         self.capacidad_peso = self.fuerza * 3
+        self.actualizar_exp_proximo_nivel()
+
+    def adquirir_exp(self, puntos_exp):
+        self.exp_acumulada += puntos_exp
+        self.comprobar_nivel()
+
+    def comprobar_nivel(self):
+        if self.exp_acumulada >= self.exp_proximo_nivel:
+            self.subir_nivel()
+
+    # TODO
+    def actualizar_exp_proximo_nivel(self):
+        pass
