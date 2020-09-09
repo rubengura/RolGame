@@ -1,11 +1,6 @@
 __author__ = "rgr"
 
-from acciones import tomar_eleccion
-from personaje import Personaje
+from game import start_game
 
-print("Bienvenido a Role Game!")
-pj_name = input("Introduce el nombre de tu personaje: ")
-pj = Personaje(nombre=pj_name)
-print(f"Hola {pj.nombre}")
-
-tomar_eleccion()
+if  __name__ == "__main__":
+    start_game()
